@@ -1,0 +1,11 @@
+title: DCS Dev Index
+description: Curated index of DCS World mods, scripts, and tools for mission designers and server operators.
+remote_theme: just-the-docs/just-the-docs
+color_scheme: dark
+url: https://TylerDOC1776.github.io
+baseurl: /dcs-dev-index
+search_enabled: true
+search:
+  heading_level: 3
+  previews: 3
+footer_content: "Updated weekly by GitHub Actions."
