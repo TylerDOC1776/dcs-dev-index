@@ -26,6 +26,12 @@ SimpleRadio Standalone. De facto VOIP radio system for DCS multiplayer. Integrat
 
 ---
 
+### [dcs-bullseye](https://github.com/TylerDOC1776/dcs-bullseye)
+**Release:** [check pending](https://github.com/TylerDOC1776/dcs-bullseye/releases/latest)
+DCS server management stack — Discord bot, FastAPI REST orchestrator, and Windows agent. Long-running actions run as async Jobs; real-time state exposed via SSE/WebSocket.
+
+---
+
 ## Paid / No Release Tracking
 
 **[LotAtc](https://www.lotatc.com/)** — GCI/ATC radar client for DCS servers. Provides a terrain-masked radar picture with BRAA tools and precision approach management. Standard on servers running a dedicated GCI role. Integrates with DCSServerBot.

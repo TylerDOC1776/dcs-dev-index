@@ -37,3 +37,5 @@ Build toolchain for team-based mission development. Extracts a `.miz` to a versi
 **[Skatezilla DCS Updater](https://forum.dcs.world/topic/134493-the-dcs-updater-launcher-gui-utility-version-20-2023/)** — GUI dashboard for managing DCS installations. Multi-threaded launch, graphics preset editing outside DCS, and VR/2D launch profiles.
 
 **[Hoggit SSE Docs](https://wiki.hoggitworld.com/view/Simulator_Scripting_Engine_Documentation)** — Community reference for the DCS Scripting Engine API. Primary resource for any Lua mission scripting work.
+
+**[ATMOS-X](https://www.atx4dcs.com/)** — Atmospheric and weather enhancement toolkit. Includes 46 cloud presets, aurora effects, live METAR injection, and a visual cloud builder. Injects weather configuration directly into mission files.
