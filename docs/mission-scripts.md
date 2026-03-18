@@ -11,13 +11,13 @@ Combat Troops and Logistics Deployment. Player helicopter logistics — troop tr
 ---
 
 ### [CSAR](https://github.com/ciribob/DCS-CSAR)
-**Release:** [1.9.1](https://github.com/ciribob/DCS-CSAR/releases/tag/1.9.1)
+**Release:** [1.9.1](https://github.com/ciribob/DCS-CSAR/releases/tag/1.9.1) · last commit 2020-12-23
 Combat Search and Rescue. Spawns downed pilots at crash/eject sites; helicopter crews locate and extract them to friendly airbases. Lightweight and common on multiplayer servers. Requires MIST.
 
 ---
 
 ### [Skynet IADS](https://github.com/walder/Skynet-IADS)
-**Release:** [3.3.0](https://github.com/walder/Skynet-IADS/releases/tag/3.3.0)
+**Release:** [3.3.0](https://github.com/walder/Skynet-IADS/releases/tag/3.3.0) · last commit 2023-12-29
 Integrated Air Defense System behavior. SAM sites and EW radars share tracks, shut down when HARM threats are detected, and coordinate sector coverage. Supports multiple independent IADS networks per coalition.
 
 ---
@@ -29,7 +29,7 @@ Self-hostable AI GCI controller over SRS. Voice recognition (local or cloud STT)
 ---
 
 ### [Splash Damage](https://github.com/stephenpostlethwaite/DCSSplashDamageScript)
-**Release:** [check pending](https://github.com/stephenpostlethwaite/DCSSplashDamageScript/releases/latest)
+**Release:** [77bd7f1](https://github.com/stephenpostlethwaite/DCSSplashDamageScript/commit/77bd7f1f47f09b9c0c3914095c0db0a9f603157c)
 Adds realistic area-effect blast damage, secondary explosions, and shaped charge behavior to DCS ordnance. Commonly added to servers to improve ground combat realism.
 
 ---

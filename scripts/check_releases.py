@@ -2,6 +2,7 @@
 """
 Check GitHub repos listed in docs/*.md for newer releases.
 Updates **Release:** lines in-place when a newer version is found.
+Appends a staleness note if the last commit is over 1.5 years old.
 """
 
 import json
@@ -10,17 +11,17 @@ import re
 import sys
 import urllib.error
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 DOCS_DIR = Path(__file__).parent.parent / "docs"
+STALE_DAYS = 548  # ~1.5 years
 
 HEADER_RE = re.compile(
     r"^### \[[^\]]+\]\(https://github\.com/([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)"
 )
-RELEASE_RE = re.compile(
-    r"^\*\*Release:\*\* \[.*?\]\(https://github\.com/[^)]+\)$"
-)
+RELEASE_RE = re.compile(r"^\*\*Release:\*\* \[")
 
 
 def gh_request(path):
@@ -35,18 +36,50 @@ def gh_request(path):
         return json.loads(resp.read().decode())
 
 
-def latest_release(repo):
+def get_repo_info(repo):
+    """Returns (label, url, last_commit_date). Falls back: release -> tag -> commit."""
+    label = url = None
+
+    # 1. Try GitHub Releases
     try:
         data = gh_request(f"/repos/{repo}/releases/latest")
-        return data["tag_name"], data["html_url"]
+        label = data["tag_name"]
+        url = data["html_url"]
     except urllib.error.HTTPError as e:
-        if e.code == 404:
-            return None, None
-        print(f"  WARNING: HTTP {e.code} for {repo}", file=sys.stderr)
-        return None, None
+        if e.code != 404:
+            print(f"  WARNING: HTTP {e.code} for {repo}", file=sys.stderr)
+            return None, None, None
     except Exception as e:
         print(f"  WARNING: {e} for {repo}", file=sys.stderr)
-        return None, None
+        return None, None, None
+
+    # 2. Fall back to git tags
+    if not label:
+        try:
+            tags = gh_request(f"/repos/{repo}/tags?per_page=1")
+            if tags:
+                label = tags[0]["name"]
+                url = f"https://github.com/{repo}/tree/{label}"
+        except Exception as e:
+            print(f"  WARNING: tags lookup failed for {repo}: {e}", file=sys.stderr)
+
+    # 3. Get latest commit — used for commit fallback label and staleness check
+    commit_date = None
+    try:
+        commits = gh_request(f"/repos/{repo}/commits?per_page=1")
+        if commits:
+            date_str = commits[0]["commit"]["committer"]["date"]
+            commit_date = datetime.fromisoformat(
+                date_str.replace("Z", "+00:00")
+            ).date()
+            if not label:
+                sha = commits[0]["sha"]
+                label = sha[:7]
+                url = f"https://github.com/{repo}/commit/{sha}"
+    except Exception as e:
+        print(f"  WARNING: commit lookup failed for {repo}: {e}", file=sys.stderr)
+
+    return label, url, commit_date
 
 
 def process_file(path):
@@ -65,11 +98,16 @@ def process_file(path):
             continue
 
         if current_repo and RELEASE_RE.match(stripped):
-            tag, url = latest_release(current_repo)
-            if tag and url:
-                new_line = f"**Release:** [{tag}]({url})\n"
+            label, url, commit_date = get_repo_info(current_repo)
+            if label and url:
+                stale = ""
+                if commit_date:
+                    today = datetime.now(timezone.utc).date()
+                    if (today - commit_date).days > STALE_DAYS:
+                        stale = f" · last commit {commit_date}"
+                new_line = f"**Release:** [{label}]({url}){stale}\n"
                 if new_line != line:
-                    print(f"  {current_repo}: -> {tag}")
+                    print(f"  {current_repo}: -> {label}{stale}")
                     lines[i] = new_line
                     changed = True
             current_repo = None
