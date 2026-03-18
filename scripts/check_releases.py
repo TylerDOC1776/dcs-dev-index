@@ -73,9 +73,9 @@ def get_repo_info(repo):
                 date_str.replace("Z", "+00:00")
             ).date()
             if not label:
-                sha = commits[0]["sha"]
-                label = sha[:7]
-                url = f"https://github.com/{repo}/commit/{sha}"
+                # No release or tag — link to the repo itself, use date as label
+                label = str(commit_date)
+                url = f"https://github.com/{repo}"
     except Exception as e:
         print(f"  WARNING: commit lookup failed for {repo}: {e}", file=sys.stderr)
 
