@@ -13,7 +13,7 @@ OOP mission scripting framework. The de facto standard for complex missions. Pro
 ---
 
 ### [MIST](https://github.com/mrSkortch/MissionScriptingTools)
-**Release:** [4.5.126](https://github.com/mrSkortch/MissionScriptingTools/releases/tag/4.5.126)
+**Release:** [4.5.126](https://github.com/mrSkortch/MissionScriptingTools/releases/tag/4.5.126) · last commit 2024-04-03
 Lower-level utility library providing helper functions, unit databases, scheduling, and coordinate conversion. Required dependency for CTLD and CSAR. Good entry point for writing custom scripts without full MOOSE.
 
 - **Docs:** https://wiki.hoggitworld.com/view/Mission_Scripting_Tools_Documentation

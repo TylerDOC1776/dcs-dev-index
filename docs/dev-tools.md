@@ -11,7 +11,7 @@ Python library for programmatically creating and modifying DCS `.miz` files. Sup
 ---
 
 ### [DCS-BIOS](https://github.com/DCS-Skunkworks/dcs-bios)
-**Release:** [v0.11.2](https://github.com/DCS-Skunkworks/dcs-bios/releases/tag/v0.11.2)
+**Release:** [v0.11.3](https://github.com/DCS-Skunkworks/dcs-bios/releases/tag/v0.11.3)
 Export hook that exposes cockpit control states over serial/UDP for hardware cockpit builders. The standard for DIY pit integration with Arduino or ESP32.
 
 - **Docs:** https://dcs-bios.readthedocs.io/

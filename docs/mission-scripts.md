@@ -23,13 +23,13 @@ Integrated Air Defense System behavior. SAM sites and EW radars share tracks, sh
 ---
 
 ### [SkyEye](https://github.com/dharmab/skyeye)
-**Release:** [v1.8.0](https://github.com/dharmab/skyeye/releases/tag/v1.8.0)
+**Release:** [v1.8.1](https://github.com/dharmab/skyeye/releases/tag/v1.8.1)
 Self-hostable AI GCI controller over SRS. Voice recognition (local or cloud STT) + neural TTS. Supports PICTURE, BOGEY DOPE, DECLARE, SNAPLOCK, SPIKED, STROBE, ALPHA CHECK, and automatic THREAT/MERGED/FADED callouts. Integrates with DCSServerBot.
 
 ---
 
 ### [Splash Damage](https://github.com/stephenpostlethwaite/DCSSplashDamageScript)
-**Release:** [77bd7f1](https://github.com/stephenpostlethwaite/DCSSplashDamageScript/commit/77bd7f1f47f09b9c0c3914095c0db0a9f603157c)
+**Release:** [2025-12-07](https://github.com/stephenpostlethwaite/DCSSplashDamageScript)
 Adds realistic area-effect blast damage, secondary explosions, and shaped charge behavior to DCS ordnance. Commonly added to servers to improve ground combat realism.
 
 ---
