@@ -27,7 +27,7 @@ SimpleRadio Standalone. De facto VOIP radio system for DCS multiplayer. Integrat
 ---
 
 ### [dcs-bullseye](https://github.com/TylerDOC1776/dcs-bullseye)
-**Release:** [2026-03-16](https://github.com/TylerDOC1776/dcs-bullseye)
+**Release:** [2026-03-27](https://github.com/TylerDOC1776/dcs-bullseye)
 DCS server management stack — Discord bot, FastAPI REST orchestrator, and Windows agent. Long-running actions run as async Jobs; real-time state exposed via SSE/WebSocket.
 
 ---
