@@ -5,7 +5,7 @@ Tools for running and managing DCS dedicated servers.
 ---
 
 ### [DCSServerBot](https://github.com/Special-K-s-Flightsim-Bots/DCSServerBot)
-**Release:** [v3.0.4.21](https://github.com/Special-K-s-Flightsim-Bots/DCSServerBot/releases/tag/v3.0.4.21)
+**Release:** [v3.0.4.22](https://github.com/Special-K-s-Flightsim-Bots/DCSServerBot/releases/tag/v3.0.4.22)
 Full-featured server admin bot with Discord integration. Handles server monitoring, per-player statistics, mission rotation, slot blocking, and bans. Integrates with SRS, LotAtc, Olympus, SkyEye, Tacview, and DCS-gRPC. Scales from single-server hobby setups to large multi-server deployments.
 
 - **Docs:** https://special-k-s-flightsim-bots.github.io/DCSServerBot/
