@@ -5,7 +5,7 @@ Tools for generating and managing dynamic missions and campaigns.
 ---
 
 ### [DCS Retribution](https://github.com/dcs-retribution/dcs-retribution)
-**Release:** [v1.4.1](https://github.com/dcs-retribution/dcs-retribution/releases/tag/v1.4.1)
+**Release:** [v1.5.0](https://github.com/dcs-retribution/dcs-retribution/releases/tag/v1.5.0)
 Active community fork of DCS Liberation. Turn-based dynamic campaign engine — manages a persistent strategic layer with logistics, reinforcements, and air superiority over time. More actively developed than the original Liberation.
 
 ---
