@@ -5,7 +5,7 @@ Tools for running and managing DCS dedicated servers.
 ---
 
 ### [DCSServerBot](https://github.com/Special-K-s-Flightsim-Bots/DCSServerBot)
-**Release:** [v3.0.4.23](https://github.com/Special-K-s-Flightsim-Bots/DCSServerBot/releases/tag/v3.0.4.23)
+**Release:** [v3.0.4.24](https://github.com/Special-K-s-Flightsim-Bots/DCSServerBot/releases/tag/v3.0.4.24)
 Full-featured server admin bot with Discord integration. Handles server monitoring, per-player statistics, mission rotation, slot blocking, and bans. Integrates with SRS, LotAtc, Olympus, SkyEye, Tacview, and DCS-gRPC. Scales from single-server hobby setups to large multi-server deployments.
 
 - **Docs:** https://special-k-s-flightsim-bots.github.io/DCSServerBot/
@@ -27,7 +27,7 @@ SimpleRadio Standalone. De facto VOIP radio system for DCS multiplayer. Integrat
 ---
 
 ### [dcs-bullseye](https://github.com/TylerDOC1776/dcs-bullseye)
-**Release:** [2026-04-16](https://github.com/TylerDOC1776/dcs-bullseye)
+**Release:** [2026-04-26](https://github.com/TylerDOC1776/dcs-bullseye)
 DCS server management stack — Discord bot, FastAPI REST orchestrator, and Windows agent. Long-running actions run as async Jobs; real-time state exposed via SSE/WebSocket.
 
 ---
